@@ -100,7 +100,7 @@ class CalculateMean:
         for i, aluno in enumerate(data["alunos"]):
             media = 0
             for nota in aluno["notas"]:
-                media += nota
+                media += nota / len(aluno["notas"])
             data["alunos"][i]["media"] = media
         return data
 
