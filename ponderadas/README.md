@@ -1,8 +1,6 @@
-# Ponderadas módulo 7
+# Ponderadas módulo 8
 
 
-## Atividade 1: Criando o ambiente para a execução de uma aplicação containerizada (former: Criando uma conta em uma núvem comercial)
+## Atividade 1: Requisito não funcional
 
-## Atividade 2: Criação de uma aplicação protegida com CRUD
-
-## Atividade 3: Deploy de modelo de Machine Learning na Nuvem
+Ponderada da semana 2, consiste em aprofundar um requisito não funcional usado no projeto.
