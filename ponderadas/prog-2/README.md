@@ -58,9 +58,7 @@ Com isso, você já pode começar a mapear o ambiente. No fim, o seu mapa será 
 
 #### Demonstação do mapeamento:
 
-https://github.com/Lukovsk/Inteli-modulo-8/assets/99260684/5b6a7214-6f24-415f-872e-67043219d783
-
-
+[mapeamento.webm](https://github.com/Lukovsk/Inteli-modulo-8/assets/99260684/5b6a7214-6f24-415f-872e-67043219d783)
 
 ### Caminhar
 
@@ -76,6 +74,5 @@ no diretório ```launch/```, abrirá 2 softwares e rodará o meu pacote:
 
 #### Demonstração do turtlebot3 seguindo o caminho:
 
-
-https://github.com/Lukovsk/Inteli-modulo-8/assets/99260684/edc3b89a-cf1e-4918-9f56-500bf884f4db
+[caminhando.webm](https://github.com/Lukovsk/Inteli-modulo-8/assets/99260684/edc3b89a-cf1e-4918-9f56-500bf884f4db)
 
