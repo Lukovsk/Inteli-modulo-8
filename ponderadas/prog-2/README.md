@@ -11,7 +11,7 @@ Desenvolva um pacote em ROS com as funcionalidades de mapeamento e navegação u
 - ✅ Ser capaz de desviar de obstáculos de forma dinâmica (obstáculos não mapeados);
 - ✅ O sistema deve ser idempotente. Isso significa, na prática, que mesmo rodando várias vezes o navegador, ele vai passar pelos mesmos pontos (sem tentar inicializar a pose duas vezes);
 
-# Conteúdo
+#z Conteúdo
 
 ## Estrutura de pastas
 <pre><code>prog-2/pacote1/
