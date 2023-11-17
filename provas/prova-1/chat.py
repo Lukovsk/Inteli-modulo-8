@@ -21,7 +21,7 @@ intentions = {
         r"(?:(?:[Ss]tatus)|(.*[Oo]nde*.)|(.*pedido*.))"
         ],
     "exit": [
-        r"\b(?:[Ee]xit)"
+        r"\b(?:[Ss]air)"
     ]
 }
 
