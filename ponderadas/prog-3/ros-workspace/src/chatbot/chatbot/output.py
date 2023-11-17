@@ -40,7 +40,8 @@ class CommandProcessor:
             ],
             "go_to_goal": [
                 r"[Vv][áa]\s(?:pra|para)?\s?(?:[oaAO]\s|pr[oa]\s)?(?:me\s)?(.+)$",
-                r"[Ll]eve\s(?:pra|para)?\s?(?:[oaAO]\s|pr[oa]\s)?(.+)$"
+                r"[Ll]eve\s(?:pra|para)?\s?(?:[oaAO]\s|pr[oa]\s)?(.+)$",
+                r"\b(?:(?:[Mm]e)?\s?(?:[Ll]eve)(?:(.)?[mM]e)?)\s(?:pra|para)?\s?(?:[oaAO]\s|pr[oa]\s)?(.+)$"
                 ]
         }
     def _actions(self):
