@@ -67,3 +67,5 @@ Executando
 Um nó será criado e o terminal irá permitir que converse com o chatbot, já que este nó estará publicando no tópico ```/chatbot``` também. Tente pedir para ele ir a algum lugar ou se apresentar.
 
 ### Demonstração
+
+[recording-2023-11-17-00-30-32.webm](https://github.com/Lukovsk/Inteli-modulo-8/assets/99260684/eb6219f6-0ce5-4501-94df-204b5c9b333b)
