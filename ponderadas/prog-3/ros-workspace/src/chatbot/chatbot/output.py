@@ -15,13 +15,15 @@ class CommandProcessor:
             for pattern in patterns:
                 match = re.match(pattern, msg, re.IGNORECASE)
                 if match:
-                    print("AAAAAAAAAAAAAAAAAAAAAAAAAAA", match.groups())
-                    return self.actions[intention](match.group(1))
+                    return self.actions[intention](match.group(len(match.groups())))
 
         return "Desculpe, não entendi."
+
+    def bye(self, _):
+        return "Tchau!"
     
     def greetings(self, _) -> str:
-        return "Eae! Estou bem, como posso te ajudar?"
+        return "Eae! Tudo bem? Como posso te ajudar?"
     
     def go_to_goal(self, goal) -> str:
         return f"Indo para {goal}"
@@ -31,16 +33,21 @@ class CommandProcessor:
             "greetings": [
                 r"\b(?:(?:[Bb]o[am])\s(tarde|dia|noite))",
                 r"\b(?:[Tt]udo)?\s?(?:(?:[Bb]em)|(?:[Bb]ão)|(?:[Ff]irme)|(?:em\sriba))",
+                r"\b(?:[Oo](?:(?:l[aá])|(?:[iI]))(?:/!)?)|\b(?:[Ee]ae)"
+            ],
+            "exit": [
+                r"\b(?:[Tt](?:[chau]))"
             ],
             "go_to_goal": [
-                r"[Vv][áa]\s(?:pra|para)?\s?(?:o\s|pro\s)?(?:me\s)?(.+)$",
-                r"[Ll]eve\s(?:pra|para)?\s?(?:o\s|pro\s)?(.+)$"
+                r"[Vv][áa]\s(?:pra|para)?\s?(?:[oaAO]\s|pr[oa]\s)?(?:me\s)?(.+)$",
+                r"[Ll]eve\s(?:pra|para)?\s?(?:[oaAO]\s|pr[oa]\s)?(.+)$"
                 ]
         }
     def _actions(self):
         return {
             "go_to_goal": lambda goal: self.go_to_goal(goal),
-            "greetings": lambda _: self.greetings(_)
+            "greetings": lambda _: self.greetings(_),
+            "exit": lambda _: self.bye(_)
         }
 
 class OutputNode(Node):
@@ -56,10 +63,11 @@ class OutputNode(Node):
         
         self.get_logger().info("Estou te ouvindo!")
     def listener_callback(self, msg):
-        self.get_logger().info(f"'{msg.data}' received")
+        self.get_logger().info(f"Awnsering '{msg.data}' : ")
         response = self.command_processor.process_command(msg.data)
-        self.get_logger().info(f"Awnsering  {msg.data}: ")
         print(f"[RESPONSE] [CHATBOT] {response}")
+        if response == "Tchau!":
+            exit()
 
 
 
