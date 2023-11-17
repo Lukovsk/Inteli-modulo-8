@@ -20,6 +20,7 @@ Desenvolva um pacote em ROS com as funcionalidades de mapeamento e navegação u
 ├── pacote1/
 └── setup.py</code> </pre>
 Onde:
+
 ```launch/```: diretório com os launchers
 
 ```pacote1/```: diretório com os scripts do meu pacote
@@ -32,13 +33,11 @@ Para rodar esta aplicação, é necessário, primeiro, fazer todo o setup com o 
 
 Segundo, clone meu respositório:
 
-<pre> <code> git clone https://github.com/Lukovsk/Inteli-modulo-8.git </code> </pre>
+<pre> <code>git clone https://github.com/Lukovsk/Inteli-modulo-8.git </code> </pre>
 
 Em seguida, instale meu pacote:
 
-<pre> <code> source /Inteli-modulo-8/ponderadas/prog-2/pacote1/install/setup.bash
-ou, se estiver usando zsh:
-source /Inteli-modulo-8/ponderadas/prog-2/pacote1/install/setup.zsh</code> </pre>
+<pre> <code>source /Inteli-modulo-8/ponderadas/prog-2/pacote1/install/setup.bash # troque para .zsh se necessário</code> </pre>
 
 Agora, você pode rodar os dois launchs.py presentes no diretório launch/. Eles são o ```mapear.launch.py``` e o ```caminhar.launch.py```. 
 
