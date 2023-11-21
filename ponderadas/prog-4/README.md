@@ -1,71 +1,55 @@
-# Atividade 3: Criação de um chatbot simples
+# Atividade 4: Construção de um chatbot com LLM
 
 ## Enunciado
 
-Desenvolva um nó de ROS que seja um chatbot capaz de entender comandos escritos em linguagem natural para interagir com um robô de serviço fictício. O chatbot deve fornecer ao usuário a possibilidade de enviar comandos de posição para o robô de forma simples e intuitiva. Exemplos de comandos:
+Utilizando um LLM (local ou API externa), crie um chatbot simples com instruções customizadas para ajudar um usuário a pesquisar normas de segurança em ambientes industriais. O sisema deve contar com uma interface gráfica e responder de forma sucinta e clara sobre o que lhe foi perguntado.
 
-<pre>Vá para a secretaria
-Dirja-se ao laboratório
-Me leve para a biblioteca
-</pre>
+Exemplo de prompt:
 
-Para cada comando registrado, o sistema deve ser capaz de extrair a intenção do usuário a partir de um dicionário de intenções, filtradas por expressões regulares. A partir daí, um segundo dicionário deve ser usado, capaz de vincular intenções à funções que o robô deve executar. Para essa ponderada, o script em Python não precisa se comunicar com o nav2 e nem com o robô, mas é necessário dar um feedback ao usuário de que a ação foi compreendida e está sendo executada. Por fim, está liberado o uso de frameworks como Chatterbot e NLTK.
+<code><pre>Quais EPIs são necessários para operar um torno mecânico?</pre></code>
+
 
 ### Padrão de qualidade:
 
 O sistema desenvolvido deve:
 
-- ✅ Comprovadamente ser capaz de compreender ao menos uma inteção do usuário: a de mandar o robô para um determinado ponto;
-- ✅ Deve haver um dicionário de intenções e a intenção deve ser caputrada através de expressões regulares;
-- ✅ Ao menos dois formatos diferentes devem ser considerados para a captura da intenção do usuário (e.g. "Vá para...", "Me leve até...");
-- ✅ O script deve contar com um dicionário de ações, relacionando cada intenção com uma função a ser executada pelo robô;
-- ✅ O chatbot deve dar feedback ao usuário sobre a compreensão do que foi dito e a ação que será tomada.
+- Utilizar o langchain para criar a interface com o modelo de LLM utilizado (pode ser openAI ou modelos do huggingface/ollama);
+- Utilizar o gradio para criar uma interface gráfica simples para o chatbot;
+- Responder de forma concisa aos prompts do usuário. Para isso, deve-se criar um prompt de sistema que contextualiza todas as respostas do modelo utilizado.
 
 # Conteúdo
 
 ## Estrutura de pastas
-<pre><code>prog-3/ros-workspace/src/chabot/
+<pre><code>prog-4/
 │
-├── chatbot/
-└── setup.py</code> </pre>
+├── app.py
+├── chat.py
+└── requirements.txt</code> </pre>
 Onde:
 
-```chatbot/```: diretório com os scripts do meu pacote
+```app.py```: script responsável por ativar a aplicação;
 
-```setup.py```: arquivo python com o setup para meu workspace
+```chat.py```: script auxiliar que faz as requisições para o openai;
+
+```requirements.txt```: arquivo com as dependências necessárias.
 
 ## Como usar essa aplicação
 
-Para rodar esta aplicação, é necessário, primeiro, fazer todo o setup com o ros e as bibliotecas necessárias. Meu professor fez um tutorial de como fazer tudo isso, aqui o [link](https://rmnicola.github.io/m8-ec-encontros/).
+Para rodar essa aplicação, primeiro você precisa da chave da API do openai. Essa chave pode ser retirada [aqui](https://platform.openai.com/api-keys)
 
-Segundo, clone meu respositório:
+Segundo, clone este respositório:
 
 <pre> <code>git clone https://github.com/Lukovsk/Inteli-modulo-8.git </code> </pre>
 
-Em seguida, instale meu pacote chatbot:
+Em seguida, neste diretório, instale as dependências necessárias:
 
-<pre> <code>source /Inteli-modulo-8/ponderadas/prog-2/pacote1/install/setup.bash # troque para .zsh se necessário</code> </pre>
+<pre> <code>python -m pip install -r requirements.txt</code> </pre>
 
-Agora, você pode rodar os dois nós presentes no pacote. Para isso, em dois terminais diferentes, execute:
-<pre><code>ros2 run chatbot output
-ros2 run chatbot input</code></pre> 
+Agora, basta executar o arquivo ```app.py```:
 
-### Output
-
-Executando
-
-<pre><code>ros2 run chatbot ouput</code></pre>
-
-Um nó será criado e o terminal irá dispor todas as respostas que o chatbot estiver produzindo pelo tópico ```/chatbot```, no qual este nó está inscrito.
-
-### Input
-
-Executando 
-
-<pre><code>ros2 run chatbot input</code></pre>
-
-Um nó será criado e o terminal irá permitir que converse com o chatbot, já que este nó estará publicando no tópico ```/chatbot``` também. Tente pedir para ele ir a algum lugar ou se apresentar.
+<pre><code>python app.py</code></pre> 
 
 ### Demonstração
 
-[recording-2023-11-17-00-30-32.webm](https://github.com/Lukovsk/Inteli-modulo-8/assets/99260684/eb6219f6-0ce5-4501-94df-204b5c9b333b)
+
+
