@@ -1,0 +1,36 @@
+Perceptron activated.
+Perceptron trained with success.
+My bias: 0.30000000000000004, my weight: [0.2 0.2]
+==== For logic 'OR' gate ====
+in (0, 0), out: 0
+in (0, 1), out: 1
+in (1, 0), out: 1
+in (1, 1), out: 1
+
+Perceptron activated.
+Perceptron trained with success.
+My bias: 0.5, my weight: [-0.1  0. ]
+==== For logic 'XOR' gate ====
+in (0, 0), out: 1
+in (0, 1), out: 1
+in (1, 0), out: 0
+in (1, 1), out: 0
+
+Perceptron activated.
+Perceptron trained with success.
+My bias: 0.7, my weight: [-0.1 -0.1]
+==== For logic 'NAND' gate ====
+in (0, 0), out: 1
+in (0, 1), out: 1
+in (1, 0), out: 1
+in (1, 1), out: 0
+
+Perceptron activated.
+Perceptron trained with success.
+My bias: 0.2, my weight: [0.2 0.2]
+==== For logic 'AND' gate ====
+in (0, 0), out: 0
+in (0, 1), out: 0
+in (1, 0), out: 0
+in (1, 1), out: 1
+
