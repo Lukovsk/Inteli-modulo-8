@@ -17,6 +17,7 @@ Implementação de um perceptron capaz de ser treinado para reproduzir o comport
 # Conteúdo
 
 ## Estrutura de pastas
+
 <pre><code>prog-6/
 │
 ├── main.py
@@ -79,6 +80,7 @@ Como pode ser visto, o perceptron, mesmo treinado, não acertou as relações da
 
 ### Demonstração
 
+[96bbdf5c-8c16-4e72-bc0f-2e755b0cd239.webm](https://github.com/Lukovsk/Inteli-modulo-8/assets/99260684/bbf82439-00a3-48a7-a3d5-8b113223b9a8)
 
 
 
