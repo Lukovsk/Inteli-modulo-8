@@ -76,8 +76,7 @@ Cada saída representa o perceptron sendo treinado com os dados para uma porta l
 
 ### XOR
 
-Como pode ser visto, o perceptron, mesmo treinado, não acertou as relações da porta lógica *XOR*. A explicação para isso é a de que o treinamento do perceptron não o prepara para execuções não-lineares, como o XOR, que envolve uma divisão binária. 
-
+Como pode ser visto, o perceptron, mesmo treinado, não acertou as relações da porta lógica *XOR*. A explicação para isso é a de que o treinamento do perceptron segue um classificador linear, não conseguindo predizer o funcionamento dele, já que sua disposição de possibilidades não é linear. Para um perceptron representar um XOR, seriam necessárias novas camadas, construindo uma rede neural.
 ### Demonstração
 
 [96bbdf5c-8c16-4e72-bc0f-2e755b0cd239.webm](https://github.com/Lukovsk/Inteli-modulo-8/assets/99260684/bbf82439-00a3-48a7-a3d5-8b113223b9a8)
