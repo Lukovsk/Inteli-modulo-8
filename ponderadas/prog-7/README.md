@@ -30,3 +30,5 @@ Em seguida, neste diretório, apenas rode o notebook ```CNN.ipynb```, ele demora
 
 ### Demonstração
 
+https://github.com/Lukovsk/Inteli-modulo-8/assets/99260684/c48428a2-f4e8-468c-8835-5f206a2fc8b3
+
