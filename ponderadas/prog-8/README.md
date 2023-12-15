@@ -44,7 +44,12 @@ No próprio terminal, pode-se ver a trascrição do áudio, além da sua traduç
 
 ### Output
 
+<pre><code>Compreendido: 'entre das habilidades 3/6 composi��o distribui��o de funcionalidades e dispositivos do sistema como a mesma funcionalidade � realizada a partir da contribui��o e da rela��o destes diversos dispositivos consist�ncia uso padronizado de textos �cone [...] Paralelos mas as linhas de divis�o n�o s�o perpendiculares ao plano de palha��o'
+In english: 'Between Skills 3/6 Composition Distribution of System Functionalities and Devices as the same functionality is performed from the contribution [...] and projection plane are parallel but the division lines are not perpendicular to the clown plane'</code></pre>
+
+No meu caso, ele também demonstra um erro que envolve algum problema que eu tenho com a reprodução do áudio gerado, mas ele é salvo no diretório ```outputs/``` e pode ser reproduzido normalmente por lá.
 
 ### Demonstração do turtlebot3 seguindo o caminho:
 
+[929640cd-3f24-4ef1-a35d-6121d0ed03d6.webm](https://github.com/Lukovsk/Inteli-modulo-8/assets/99260684/3376a306-1e86-450c-9353-e17b55a4894a)
 
